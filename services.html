@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Irish Developer</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --text: #e0e0e0;
+      --accent: #00d4ff;
+      --card: #1a1a1a;
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      margin: 0;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1.5rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 15, 15, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 2.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    main {
+      padding-top: 7rem;
+      padding-bottom: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      color: var(--accent);
+      text-align: center;
+    }
+    .pricing-table {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .pricing-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 2rem;
+      min-width: 260px;
+      max-width: 340px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .pricing-card h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .pricing-card li {
+      margin-bottom: 0.5rem;
+    }
+    .pricing-card .price {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .order-form {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .order-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    .order-form input, .order-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: none;
+      background: #222;
+      color: var(--text);
+      font-size: 1rem;
+    }
+    .order-form button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .order-form button:hover {
+      background: #00b4d8;
+    }
+    @media (max-width: 768px) {
+      nav a { margin-left: 1.2rem; font-size: 0.95rem; }
+      .pricing-table { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div></div>
+    <nav>
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Services & Pricing</h1>
+    <div class="pricing-table">
+      <div class="pricing-card">
+        <h3>Discord Bot Development</h3>
+        <ul>
+          <li>Custom bots for automation & moderation</li>
+          <li>Integration with APIs</li>
+          <li>Tailored features for your server</li>
+        </ul>
+        <div class="price">€50+</div>
+      </div>
+      <div class="pricing-card">
+        <h3>Automation & Scripting</h3>
+        <ul>
+          <li>Automate tasks & workflows</li>
+          <li>Platform integration (Twitch, YouTube, etc.)</li>
+          <li>Custom scripts & utilities</li>
+        </ul>
+        <div class="price">€40+</div>
+      </div>
+      <div class="pricing-card">
+        <h3>Custom Tool Development</h3>
+        <ul>
+          <li>Bespoke tools for productivity</li>
+          <li>Unique solutions for your needs</li>
+          <li>Open-source or private delivery</li>
+        </ul>
+        <div class="price">€60+</div>
+      </div>
+    </div>
+    <section>
+      <h2>Order / Request Service</h2>
+      <form class="order-form" action="mailto:contact@irishdeveloper.dev" method="POST" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="service">Service</label>
+        <input type="text" id="service" name="service" required placeholder="Discord Bot, Automation, etc.">
+        <label for="details">Details</label>
+        <textarea id="details" name="details" rows="5" required placeholder="Describe your requirements..."></textarea>
+        <button type="submit">Submit Request</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
