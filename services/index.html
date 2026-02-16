@@ -59,11 +59,21 @@
       align-items: center;
       justify-content: center;
       min-height: 320px;
+      width: 100vw;
+      max-width: 100vw;
+      margin-left: calc(50% - 50vw);
       background: linear-gradient(90deg, #0f0f0f 60%, #00d4ff22 100%);
       padding-top: 7rem;
       margin-bottom: 2rem;
       border-bottom: 1px solid #222;
       text-align: center;
+      box-sizing: border-box;
+    }
+    @media (max-width: 1200px) {
+      .services-hero {
+        min-height: 220px;
+        padding-top: 6rem;
+      }
     }
     .services-hero h1 {
       font-size: 3rem;
