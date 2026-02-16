@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Irish Developer | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --text: #e0e0e0;
+      --accent: #00d4ff;
+      --card: #1a1a1a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1.5rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 15, 15, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 2.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 5%;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: -0.05em;
+      background: linear-gradient(90deg, #ffffff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 600px;
+      opacity: 0.9;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: var(--accent);
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 212, 255, 0.25);
+    }
+
+    section {
+      padding: 8rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: var(--accent);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #0a0a0a;
+      font-size: 0.95rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      nav a { margin-left: 1.2rem; font-size: 0.95rem; }
+      .hero h1 { font-size: 4.5rem; }
+      .hero p { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div></div> <!-- empty for spacing -->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Irish Developer</h1>
+      <p>Full-stack developer building clean, reliable applications from Ireland.</p>
+      <a href="#projects" class="cta">View My Work</a>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p style="max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.15rem;">
+        I specialise in modern web development with a focus on performance, accessibility, and user experience. 
+        Currently working with JavaScript/TypeScript, React, Node.js, and Python. Passionate about open-source 
+        and creating tools that solve real problems.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <!-- Add your real projects here -->
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x300/1a1a1a/00d4ff?text=Project+1" alt="Project 1">
+          <div class="project-info">
+            <h3>Project One</h3>
+            <p>A responsive web application built with React and Tailwind CSS.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x300/1a1a1a/00d4ff?text=Project+2" alt="Project 2">
+          <div class="project-info">
+            <h3>Project Two</h3>
+            <p>Backend API service using Node.js, Express, and PostgreSQL.</p>
+          </div>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p style="text-align: center; font-size: 1.2rem;">
+        Email: <a href="mailto:admin@irishdeveloper.dev" style="color: var(--accent); text-decoration: none;">admin@irishdeveloper.dev</a><br>
+        GitHub: <a href="https://github.com/irishdeveloperdev" style="color: var(--accent); text-decoration: none;">github.com/irishdeveloperdev</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Irish Developer. All rights reserved.
+  </footer>
+
+</body>
+</html>
